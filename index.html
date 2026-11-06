@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>ainii — Little things, lovely things</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+
+:root{--green:#173e33;--cream:#f8f7f1;--sage:#dce3d8;--ink:#263a30}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif}
+
+a{color:inherit;text-decoration:none}
+
+button{font:inherit;cursor:pointer}
+
+.topnote{text-align:center;background:var(--green);color:#f8f7f1;padding:9px;font-size:9px;letter-spacing:2px}
+
+header{height:76px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e8e5dc}
+
+.logo{font-family:'Playfair Display',serif;font-size:30px;letter-spacing:5px}
+
+.nav{display:flex;gap:27px;font-size:10px;letter-spacing:1.5px}
+
+.bag{border:0;background:none;font-size:10px;letter-spacing:1px}
+
+.hero{background:var(--green);color:#f8f7f1;padding:75px 7% 65px;min-height:510px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:25px}
+
+.eyebrow{font-size:9px;letter-spacing:3px;color:#c4d0c1}
+
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(48px,7vw,83px);font-weight:400;line-height:1.05;margin:30px 0}
+
+.hero h1 i{color:#cbd8c7}
+
+.hero p{font-size:12px;line-height:2;color:#d4ddd2;max-width:310px}
+
+.cta{display:inline-block;margin-top:24px;padding:14px 23px;border:1px solid #d6dfd2;font-size:9px;letter-spacing:2px}
+
+.heroimg{height:340px;background:#d9dfd3;overflow:hidden}
+
+.heroimg img{width:100%;height:100%;object-fit:cover}
+
+.intro{text-align:center;padding:80px 20px 55px}
+
+.intro .eyebrow{color:#778c7c}
+
+.intro h2{font-family:'Playfair Display',serif;font-size:37px;font-weight:400;margin:17px 0}
+
+.intro p{font-size:11px;line-height:2;color:#778078}
+
+.section{padding:35px 6% 85px}
+
+.sectionhead{display:flex;align-items:end;justify-content:space-between;margin-bottom:28px}
+
+.sectionhead h2{font-family:'Playfair Display',serif;font-weight:400;font-size:34px;margin:9px 0 0}
+
+.sectionhead span{font-size:9px;letter-spacing:2px}
+
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
+
+.productimg{height:290px;background:#e9e9df;overflow:hidden}
+
+.productimg img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+
+.product:hover img{transform:scale(1.04)}
+
+.productname{font-family:'Playfair Display',serif;font-size:18px;margin-top:15px}
+
+.productinfo{font-size:10px;color:#858c82;margin-top:6px}
+
+.productbottom{display:flex;align-items:center;justify-content:space-between}
+
+.add{border:1px solid #b7c2b6;background:transparent;padding:8px 11px;font-size:9px;letter-spacing:1px}
+
+.add:active{background:var(--green);color:white}
+
+.story{background:#e9ebe3;padding:75px 8%;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+
+.story img{width:100%;height:330px;object-fit:cover}
+
+.story h2{font-family:'Playfair Display',serif;font-weight:400;font-size:42px;line-height:1.2}
+
+.story p{font-size:11px;line-height:2.2;color:#66736a}
+
+.story .eyebrow{color:#788c7b}
+
+.newsletter{text-align:center;padding:75px 20px}
+
+.newsletter h2{font-family:'Playfair Display',serif;font-weight:400;font-size:32px}
+
+.newsletter p{font-size:11px;color:#788078;line-height:2}
+
+.newsletter a{display:inline-block;margin-top:15px;border-bottom:1px solid;padding:10px;font-size:10px;letter-spacing:1px}
+
+footer{background:var(--green);color:#f8f7f1;text-align:center;padding:45px 20px}
+
+footer .logo{font-size:32px}
+
+footer p{font-size:9px;letter-spacing:2px;color:#c5d0c5;margin-top:15px}
+
+.footlinks{display:flex;justify-content:center;gap:22px;margin:27px 0;font-size:9px;letter-spacing:1px}
+
+.copyright{font-size:8px;color:#9aafa0}
+
+@media(max-width:600px){
+
+header{height:65px;padding:0 17px}
+
+.logo{font-size:26px}
+
+.nav{gap:12px;font-size:8px}
+
+.bag{font-size:9px}
+
+.hero{grid-template-columns:1fr;padding:57px 23px 35px;gap:30px}
+
+.hero h1{font-size:60px;margin:22px 0}
+
+.heroimg{height:280px}
+
+.intro{padding:65px 20px 35px}
+
+.intro h2{font-size:32px}
+
+.section{padding:30px 17px 65px}
+
+.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 12px}
+
+.productimg{height:205px}
+
+.productname{font-size:16px}
+
+.productbottom{align-items:start;gap:5px;flex-direction:column}
+
+.story{grid-template-columns:1fr;padding:55px 22px;gap:20px}
+
+.story img{height:280px}
+
+.story h2{font-size:38px;margin:15px 0}
+
+.sectionhead h2{font-size:29px}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="topnote">A LITTLE SOMETHING, MADE WITH LOVE · AINII</div>
+
+<header>
+
+ <nav class="nav"><a href="#shop">SHOP</a><a href="#story">ABOUT</a></nav>
+
+ <a href="#" class="logo">ainii</a>
+
+ <button class="bag" onclick="showBag()">BAG (<span id="count">0</span>)</button>
+
+</header>
+
+<section class="hero">
+
+ <div>
+
+  <div class="eyebrow">HANDMADE BEADED JEWELRY</div>
+
+  <h1>Little things,<br><i>lovely things.</i></h1>
+
+  <p>Small pieces of joy, carefully made by hand. Discover jewelry that makes the everyday feel a little more special.</p>
+
+  <a class="cta" href="#shop">DISCOVER THE COLLECTION ↗</a>
+
+ </div>
+
+ <div class="heroimg">
+
+  <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900&q=85" alt="Minimal jewelry editorial">
+
+ </div>
+
+</section>
+
+<section class="intro">
+
+ <div class="eyebrow">WELCOME TO AINII</div>
+
+ <h2>Made to be yours.</h2>
+
+ <p>Colorful little details. Thoughtful handmade pieces.<br>Jewelry to keep close, every day.</p>
+
+</section>
+
+<section class="section" id="shop">
+
+ <div class="sectionhead">
+
+  <div><div class="eyebrow">OUR FAVORITES</div><h2>The collection</h2></div>
+
+  <span>01 — 04</span>
+
+ </div>
+
+ <div class="products">
+
+  <article class="product">
+
+   <div class="productimg"><img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=650&q=85" alt="Beaded jewelry"></div>
+
+   <div class="productname">The little ring</div>
+
+   <div class="productinfo">HANDMADE BEADS · RING</div>
+
+   <div class="productbottom"><span class="productinfo">Price to be announced</span><button class="add" onclick="addBag('The little ring')">ADD +</button></div>
+
+  </article>
+
+  <article class="product">
+
+   <div class="productimg"><img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=650&q=85" alt="Elegant bracelet"></div>
+
+   <div class="productname">The daily bracelet</div>
+
+   <div class="productinfo">HANDMADE BEADS · BRACELET</div>
+
+   <div class="productbottom"><span class="productinfo">Price to be announced</span><button class="add" onclick="addBag('The daily bracelet')">ADD +</button></div>
+
+  </article>
+
+  <article class="product">
+
+   <div class="productimg"><img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=650&q=85" alt="Minimal jewelry"></div>
+
+   <div class="productname">The tiny moment</div>
+
+   <div class="productinfo">HANDMADE BEADS · ACCESSORY</div>
+
+   <div class="productbottom"><span class="productinfo">Price to be announced</span><button class="add" onclick="addBag('The tiny moment')">ADD +</button></div>
+
+  </article>
+
+ </div>
+
+</section>
+
+<section class="story" id="story">
+
+ <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=850&q=85" alt="Jewelry details">
+
+ <div>
+
+  <div class="eyebrow">A NOTE FROM AINII</div>
+
+  <h2>Beauty lives in the little things.</h2>
+
+  <p>We believe that the smallest things can hold the sweetest memories. Each piece is made with care, color, and a little bit of love.</p>
+
+  <p>Welcome to our little world.</p>
+
+  <div class="logo">ainii</div>
+
+ </div>
+
+</section>
+
+<section class="newsletter">
+
+ <div class="eyebrow">STAY A LITTLE CLOSER</div>
+
+ <h2>Let's be friends.</h2>
+
+ <p>Follow our little world and discover new handmade pieces.</p>
+
+ <a href="https://www.instagram.com/" target="_blank">FOLLOW ON INSTAGRAM ↗</a>
+
+</section>
+
+<footer>
+
+ <div class="logo">ainii</div>
+
+ <p>A LITTLE PIECE OF YOU.</p>
+
+ <div class="footlinks"><a href="#shop">SHOP</a><a href="#story">OUR STORY</a><a href="mailto:hello@ainii.com">CONTACT</a></div>
+
+ <div class="copyright">© 2026 AINII · MADE WITH LOVE</div>
+
+</footer>
+
+<script>
+
+let cart=[];
+
+function addBag(name){
+
+ cart.push(name);
+
+ document.getElementById('count').textContent=cart.length;
+
+ alert(name+' added to your bag!');
+
+}
+
+function showBag(){
+
+ if(!cart.length){alert('Your bag is empty.');return;}
+
+ alert('YOUR BAG\n\n'+cart.join('\n')+'\n\nTotal items: '+cart.length);
+
+}
+
+</script>
+
+</body>
+
+</html>
